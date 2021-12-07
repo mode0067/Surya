@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website by - Surya Majhi</title>
+    <title>complete responsive personal portfolio website desgin</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -95,7 +95,7 @@
             <h3>my name is <span>SURYA MAJHI</span></h3>
             <p>“I’m dishonest, and a dishonest boy you can always trust to be dishonest. Honestly. It’s the honest ones you want to watch out for, because you can never predict when they’re going to do something incredibly … stupid.”
             </p>
-            <a href="#contact" class="btn">contact me</a>
+            <a href="" class="btn">contact me</a>
         </div>
 
     </div>
@@ -238,15 +238,66 @@
 
     <h1 class="heading"> <span>contact</span> me </h1>
 
-    <form action="">
-        <input type="text" placeholder="your name" class="box">
-        <input type="email" placeholder="your email" class="box">
-        <input type="text" placeholder="subject" class="box">
-        <textarea name="" class="box" placeholder="your message" id="" cols="30" rows="10"></textarea>
+    <form action="javascript:sendmail()" method="post">
+        <input type="text" placeholder="your name" id="Name" class="box">
+        <input type="email" placeholder="your email" id="Mail" class="box">
+        <input type="text" placeholder="subject" id="Text" class="box">
+        <textarea name="Texta" class="box" placeholder="your message" id="Texta" cols="30" rows="10"></textarea>
         <input type="submit" value="send message" class="btn">
     </form>
 
 </section>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+
+
+    function sendmail(){
+
+    var name = $('#Name').val();
+    var email = $('#Mail').val();
+    var subject = $('#Text').val();
+    var message = $('#Texta').val();
+
+    var body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+    
+
+
+
+Email.send({
+    Host : "smtp.gmail.com",
+    Username : "suryaisagoodboy2@gmail.com",
+    Password : "wjorshvzbytgekkh",
+    To : 'modeuser067@gmail.com',
+    From : "suryaisagoodboy2@gmail.com",
+    Subject : "Form Submitted by"+name,
+    Body : body
+}).then(
+  message =>{
+      if(message== 'OK'){
+          alert('Thank you for contacting me !');
+      }
+      else{
+          console.error (message);
+          alert('There is a error')
+      }
+
+      }
+);
+
+    }
+
+</script>
+
+
+
+
+
 
 <!-- contact section ends -->
 
@@ -258,14 +309,14 @@
 
 
 
-
+<script src="js/script.js"></script>
 
 
 
 
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+
 
 </body>
 </html>
