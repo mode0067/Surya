@@ -11,7 +11,6 @@
     --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
                       -.4rem -.4rem 1rem #fff inset;
 }
-
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
@@ -21,18 +20,15 @@
     text-transform: capitalize;
     transition: .2s linear;
 }
-
 html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
 body{
     background: var(--bg-color);
     padding-left: 30rem;
 }
-
 body.active{
     --black:#fff;
     --light-color:#ddd;
@@ -43,12 +39,10 @@ body.active{
     --box-shadow-inset:.4rem .4rem 1rem #111 inset,
                       -.4rem -.4rem 1rem #333 inset;
 }
-
 section{
     min-height: 100vh;
     padding:2rem;
 }
-
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -60,12 +54,10 @@ section{
     color:var(--black);
     box-shadow: var(--box-shadow);
 }
-
 .btn:hover{
     box-shadow: var(--box-shadow-inset);
     color:var(--green);
 }
-
 .heading{
     text-align: center;
     font-size: 5rem;
@@ -472,23 +464,6 @@ section{
 .credits span{
     color: var(--green);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries  */
 
 @media (max-width:991px){
 
