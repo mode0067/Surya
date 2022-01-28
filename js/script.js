@@ -1,6 +1,6 @@
 var preloder = document.getElementById('Loading');
 function myFunction(){
-    preloder.style.display = 'none';
+   preloder.style.display = 'none';
 }
 let menu = document.querySelector('#menu-btn');
 let header = document.querySelector('.header');
